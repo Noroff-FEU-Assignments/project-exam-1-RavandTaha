@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="describtion" content="Visit of Museum, where you find information where the museum is located">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"  >
+  <title>Visit Us</title>
+</head>
+
+ <body class="exhibitions">
+
+  <header class="sub-header">
+    <nav>
+      <a href="index.html"><img src="images/logopng.png" alt="logo of community science museum, green round circle"></a>
+      <div class="nav-links" id="navLinks">
+       <i id="iheader" class="fa-regular fa-xmark" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+     </div>
+     <i id="iheader" class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>About Us</h1>
+
+  </header>
+
+  <h1>Content Coming</h1>
+
+
+  <!---Footer starts here-->
+  <hr class="h">
+  <footer class="section-p1">
+    <div class="col">
+      <h5>Shortcuts</h5>
+      <a href="index.html">Home Page</a>
+      <a href="about.html">About</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+
+    <div class="col3">
+      <h5>Contact Us</h5>
+      <p><span>Address:</span> Krokbekkveien 23A</p>
+      <p><span>Phone:</span> +47 45064796</p>
+      <p><span>Email:</span> CSC@MuscleGymNation.com</p>
+    </div>
+
+
+    <div class="copyright">
+      <p>2022 Ravand - HTML CSS</p>
+    </div>
+
+  </footer>
+
+
+
+   <!---javaScript for Toggle Menu-->
+  <script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+    function hideMenu(){
+      navLinks.style.right = "-200px";
+    }
+
+  </script>
+
+
+
+</body>
+</html>
