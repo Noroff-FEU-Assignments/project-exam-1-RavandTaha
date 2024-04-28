@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     productElement.classList.add('product-list-page');
 
                     const productLink = document.createElement('a');
-                    productLink.href = `product.html?productId=${product.id}`; 
+                    productLink.href = `blog.html?productId=${product.id}`; 
                     productElement.appendChild(productLink); 
 
                     const productImage = document.createElement('img');
@@ -138,7 +138,7 @@ fetch(apiUrl)
         
         // Create anchor element with dynamic product ID
         const productLink = document.createElement('a');
-        productLink.href = `product.html?productId=${product.id}`; // Link to product details with dynamic product ID
+        productLink.href = `blog.html?productId=${product.id}`; // Link to product details with dynamic product ID
         productElement.appendChild(productLink); // Append anchor to product container
 
         // Create image element inside the anchor
@@ -212,6 +212,7 @@ function validateForm() {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
   }
+  
   
   
   
