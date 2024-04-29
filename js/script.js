@@ -1,9 +1,11 @@
+import { BASE_URL } from "./constants.js";
+
 document.addEventListener("DOMContentLoaded", () => {
-    const apiUrl = 'http://musclegymnation.local/wp-json/wc/store/products';
+    const apiUrl = `${BASE_URL}wc/store/products`;
 
     // Function to fetch a single product by ID
     const fetchProductById = productId => {
-        const apiUrl = `http://musclegymnation.local/wp-json/wc/store/products/${productId}`;
+        const apiUrl = `${BASE_URL}wc/store/products/${productId}`;
 
         return fetch(apiUrl)
             .then(response => {
@@ -118,101 +120,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error('Error fetching products:', error);
             });
     }
-     // Fetch data from the API to display product list
-fetch(apiUrl)
-.then(response => {
-    // Check if response is successful
-    if (!response.ok) {
-        throw new Error('Failed to fetch products');
-    }
-    return response.json(); // response data as JSON
-})
-.then(products => {
-    // Process the fetched products
-    const productList = document.getElementById('blogposts');
-
-    products.forEach(product => {
-        // Create a clickable product element
-        const productElement = document.createElement('div');
-        productElement.classList.add('product-item');
-        
-        // Create anchor element with dynamic product ID
-        const productLink = document.createElement('a');
-        productLink.href = `blog.html?productId=${product.id}`; // Link to product details with dynamic product ID
-        productElement.appendChild(productLink); // Append anchor to product container
-
-        // Create image element inside the anchor
-        const productImage = document.createElement('img');
-        productImage.src = product.images[0].src; //
-        productImage.alt = product.name;
-        productImage.classList.add('product-image');
-        productLink.appendChild(productImage); // Append image to anchor
-
-        // Create product details
-        const productDetails = document.createElement('div');
-        productDetails.classList.add('product-details');
-        productDetails.innerHTML = `
-            <h2>${product.name}</h2>
-        `;
-        productElement.appendChild(productDetails); // Append product details to product container
-
-        productList.appendChild(productElement); // Append product container to product list
-    });
-})
-.catch(error => {
-    console.error('Error fetching products:', error);
-});
+    
 });
 
-function validateForm() {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-  
-    const nameError = document.getElementById('nameError');
-    const emailError = document.getElementById('emailError');
-    const subjectError = document.getElementById('subjectError');
-    const messageError = document.getElementById('messageError');
-  
-    nameError.textContent = '';
-    emailError.textContent = '';
-    subjectError.textContent = '';
-    messageError.textContent = '';
-  
-    let isValid = true;
-  
-    if (name.length <= 5) {
-      nameError.textContent = 'Name should be more than 5 characters long';
-      isValid = false;
-    }
-  
-    if (!validateEmail(email)) {
-      emailError.textContent = 'Invalid email address';
-      isValid = false;
-    }
-  
-    if (subject.length <= 15) {
-      subjectError.textContent = 'Subject should be more than 15 characters long';
-      isValid = false;
-    }
-  
-    if (message.length <= 25) {
-      messageError.textContent = 'Message content should be more than 25 characters long';
-      isValid = false;
-    }
-  
-    if (isValid) {
-      // Submit the form
-      document.getElementById('contactForm').submit();
-    }
-  }
-  
-  function validateEmail(email) {
-    const re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  }
-  
+
   
   
   

@@ -169,6 +169,25 @@ nav i {
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
+.view img {
+  max-width: 70%;
+  height: auto;
+}
+.view {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.view h3 {
+  font-size: 55px;
+  font-weight: 800;
+  color: black;
+  -webkit-background-clip: text;
+  letter-spacing: 4px;
+}
+
 /* Style for the container of the slick carousel */
 .slider-container {
   width: 80%;

@@ -1,0 +1,1 @@
+export const BASE_URL = "http://musclegymnation.local/wp-json/";
