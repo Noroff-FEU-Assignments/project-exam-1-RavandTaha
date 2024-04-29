@@ -340,6 +340,29 @@ footer strong {
   letter-spacing: 1px;
 }
 
+/* About Us Page */
+
+.aboutus {
+  text-align: center;
+}
+
+.aboutus h2 {
+  font-size: 40px;
+  color: black;
+  /* Add some space below the title */
+  margin-top: 50px;
+}
+
+.aboutus p {
+  font-size: 20px;
+  color: #666;
+  /* Change the color of the paragraph text */
+  line-height: 1.5;
+  /* Set the line height for better readability */
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
 
 
 /* Product PAGE */
@@ -461,8 +484,6 @@ body.exhibitions {
   color: black;
   margin-bottom: 10px;
 }
-
-
 
 
 
