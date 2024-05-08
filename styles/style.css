@@ -646,6 +646,11 @@ button {
     height: 290px;
   }
 
+  #latest-products h2 {
+    font-size: 40px;
+  }
+  
+
 }
 
 @media (max-width: 600px) {
